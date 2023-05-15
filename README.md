@@ -1,1 +1,1 @@
-# Virtual_lab
+# Solar-Photovoltaics-Lab

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="src/css/sim_style.css">
+	<link rel="stylesheet" href="src/css/sim_loading.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap"
+		rel="stylesheet">
+
+	<link rel="icon" href="favicon.ico">
+	<title>Electrical Engineering - Virtual Lab</title>
+	<script src="src/js/sim.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+	<body style="margin:0; font-family: verdana; color: #000;">
+		<table align="center">
+			<tr>
+				<td>
+					<div id="simscreen">
+						<div id="title">
+							<h3>SOLAR CELL</h3>
+						</div>
+
+						<!-- Home Page -->
+
+						<div class="Mainstep" id="home" style="visibility: visible;z-index: 1000;">
+
+
+
+							<p class="incanvas" style="position: absolute; top: 55px; left: 0px;font-size:15px;">
+								<strong>Objective:</strong>
+							</p>
+
+							<p class="incanvas" style="position: absolute; top: 85px; left: 0px;font-size:14px;">
+								To measure the current-voltage (I-V) characteristics of the parallel combination of solar cells.
+							</p></br>
+
+							<img id="dia" class="board" src="images/6.PNG" alt="picture" width="500" height="330"
+								style="padding-left: 7% ; margin-top: 150px;"><br>
+							<input type="button" id="next"
+								style="position:absolute; left:662px; top:320px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
+								value="&nbsp;Start Here&nbsp;" onclick="step1()" />
+
+						</div>
+
+						<!-- Step 1 -->
+
+						<div class="Mainstep" id="step1" style="visibility:hidden; z-index: 999;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;1&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;Connect three solar cell in the given circuit.
+								</i>&nbsp;</span><br><br>
+
+							<img id="step1-png1" class="board" src="images/1.PNG" alt="picture" width="523"
+								height="300" style="position: absolute;  margin-left: 24px; margin-top: 144px;">
+
+							<img id="step1-png2" class="board" src="images/Picture2.png" alt="picture" width="150"
+								height="100"
+								style="position: absolute;  margin-left: 627px; margin-top: 40px; visibility: visible;">
+
+							<img id="step1-png3" class="board" src="images/Picture2.png" alt="picture" width="150"
+								height="100"
+								style="position: absolute;  margin-left: 627px; margin-top: 191px; visibility: visible;">
+
+							<img id="step1-png4" class="board" src="images/Picture2.png" alt="picture" width="150"
+								height="100"
+								style="position: absolute;  margin-left: 627px; margin-top: 335px; visibility: visible;">
+
+							<img id="step1-png5" class="board" src="images/2.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step1-png6" class="board" src="images/3.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step1-png7" class="board" src="images/4.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+
+							<img id="arr1" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: visible; position: absolute;
+								    margin-left: 33rem;
+   								    margin-top: 63px;">
+
+							<img id="arr2" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: hidden; position: absolute;
+								    margin-left: 33rem;
+   								    margin-top: 213px;">
+
+							<img id="arr3" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: hidden; position: absolute;
+								    margin-left: 33rem;
+   								    margin-top: 377px;">
+
+							<img id="trans1" class="board" src="images/transbox.png" alt="picture" width="135"
+								height="100" style="visibility: visible; position: absolute;     margin-left: 638px;
+								margin-top: 39px;" onclick="placetheodolite()">
+
+							<img id="trans2" class="board" src="images/transbox.png" alt="picture" width="135"
+								height="100" style="visibility: hidden; position: absolute;     margin-left: 638px;
+								margin-top: 190px;" onclick="placetheodolite1()">
+
+							<img id="trans3" class="board" src="images/transbox.png" alt="picture" width="135"
+								height="100" style="visibility: hidden; position: absolute;     margin-left: 638px;
+								margin-top: 336px;" onclick="placetheodolite2()">
+
+							<input type="button" id="next1"
+								style="visibility: hidden; position:absolute; left:662px; top: 493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
+								value="&nbsp;Next Step&nbsp;" onclick="step2()" />
+
+						</div>
+
+
+						<!-- Step 2 -->
+
+						<div class="Mainstep" id="step2" style="visibility:hidden; z-index: 998;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;2&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;
+									Now connect ammeter in the given circiut in series to measure the output current.
+								</i>&nbsp;</span><br><br>
+
+							<img id="step2-png1" class="board" src="images/4.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step2-png2" class="board" src="images/Picture3.png" alt="picture" width="80"
+								height="80" style="visibility: hidden; position: absolute;
+        						top: 271px;
+    							left: 664px;">
+
+							<img id="step2-png3" class="board" src="images/7.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="2trans1" class="board" src="images/transbox.png" alt="picture" width="90"
+								height="100" style="visibility: hidden; position: absolute;     margin-left: 661px;
+								margin-top: 190px;" onclick="ammeter()">
+
+
+							<img id="2arr1" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: hidden; position: absolute;
+								margin-left: 36rem;
+								   margin-top: 213px;">
+
+							<input type="button" id="next2"
+								style="position:absolute; left:662px; top:493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px; visibility: hidden;"
+								value="&nbsp;Next Step&nbsp;" onclick="step3()" />
+
+						</div>
+
+						<!-- Step3  -->
+
+
+						<div class="Mainstep" id="step3" style="visibility:hidden; z-index: 997;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;3&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;Now Connect potentiometer in the given circuit.</i>&nbsp;</span><br><br>
+
+							<img id="step3-png1" class="board" src="images/7.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step3-png2" class="board" src="images/Picture4.png" alt="picture" width="123"
+								height="100"
+								style="position: absolute;  margin-left: 627px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step3-png3" class="board" src="images/8.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+
+							<img id="3trans1" class="board" src="images/transbox.png" alt="picture" width="130"
+								height="90" style="visibility: hidden; position: absolute;     margin-left: 623px;
+							margin-top: 138px;" onclick="poten()">
+
+
+							<img id="3arr1" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: hidden; position: absolute;
+							margin-left: 33rem;
+							   margin-top: 157px;">
+
+
+							<input type="button" id="next3"
+								style="position:absolute; left:662px; top:493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px; visibility: hidden;"
+								value="&nbsp;Next Step&nbsp;" onclick="step4()" />
+
+						</div>
+
+						<!-- Step4 -->
+
+						<div class="Mainstep" id="Step4" style="visibility:hidden; z-index: 996;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;4&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;;Now connect voltmeter in parallel with the solar cells.
+								</i>&nbsp;</span><br><br>
+
+							<img id="step4-png1" class="board" src="images/8.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step4-png2" class="board" src="images/Picture5.png" alt="picture" width="123"
+								height="100"
+								style="position: absolute;  margin-left: 627px; margin-top: 144px; visibility: hidden;">
+
+							<img id="step4-png3" class="board" src="images/9.PNG" alt="picture" width="523"
+								height="300"
+								style="position: absolute;  margin-left: 24px; margin-top: 144px; visibility: hidden;">
+
+
+							<img id="4trans1" class="board" src="images/transbox.png" alt="picture" width="130"
+								height="90" style="visibility: hidden; position: absolute;     margin-left: 623px;
+							margin-top: 138px;" onclick="voltmeter()">
+
+
+							<img id="4arr1" class="board" src="images/arrow.gif" alt="picture" width="105" height="50"
+								style="visibility: hidden; position: absolute;
+							margin-left: 33rem;
+							   margin-top: 157px;">
+
+
+							<input type="button" id="next4"
+								style="position:absolute; left:662px; top:493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px; visibility: hidden;"
+								value="&nbsp;Next Step&nbsp;" onclick="step5()" />
+
+
+						</div>
+
+						<!-- Step5 -->
+
+						<div class="Mainstep" id="Step5" style="visibility:hidden; z-index: 995;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;5&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;Now Switch on the circiut so that current started to flow. And for 
+									different values of potentiometer note difffert reading of current and voltage.
+								</i>&nbsp;</span><br><br>
+
+							<img id="step5-png1" class="board" src="images/9.PNG" alt="picture" width="570"
+								height="350"
+								style="position: absolute;  margin-left: 115px; margin-top: 69px; visibility: hidden;">
+
+							<img id="step5-png2" class="board" src="images/output-onlinegiftools (1).gif" alt="picture" width="570"
+								height="350"
+								style="position: absolute;  margin-left: 115px; margin-top: 69px; visibility: hidden;">
+
+							<img id="5trans1" class="board" src="images/transbox.png" alt="picture" width="70"
+								height="50" style="visibility: hidden; position: absolute;     margin-left: 363px;
+								margin-top: 301px;" onclick="flow_cur()">
+
+
+							<img id="5arr1" class="board" src="images/arrow down.gif" alt="picture" width="105"
+								height="50" style="visibility: hidden; position: absolute;
+								margin-left: 22rem;
+								   margin-top: 256px;">
+
+
+							<input type="button" id="next5"
+								style="position:absolute; left:662px; top:493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px; visibility: hidden;"
+								value="&nbsp;Next Step&nbsp;" onclick="step6()" />
+
+
+						</div>
+
+                       	<!-- Step 6 -->
+						<div class="Mainstep" id="Step6" style="visibility:hidden; z-index: 994;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;6&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;Observation and Result:
+								</i>&nbsp;</span><br><br>
+
+							<img id="E_table" class="board" src="images/Table.png" alt="picture" width="650"
+								height="250"
+								style="position: absolute;  margin-left: 70px; margin-top: 40px; visibility: hidden;">
+
+							<img id="f_table" class="board" src="images/Adhi_Bhari_Table1.png" alt="picture" width="650"
+								height="250"
+								style="position: absolute;  margin-left: 70px; margin-top: 40px; visibility: hidden;">
+
+							<img id="r_table" class="board" src="images/table_parallel.png" alt="picture" width="650"
+								height="250"
+								style="position: absolute;  margin-left: 70px; margin-top: 40px; visibility: hidden;">
+
+
+							<input type="button" id="fill"
+								style="visibility: visible; position:absolute; left:311px; top: 493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
+								value="&nbsp;Enter Readings&nbsp;" onclick="readingsfill()">
+							<input type="button" id="check"
+								style="visibility: hidden; position:absolute; left:311px; top: 493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px"
+								value="&nbsp;Calculate for Power&nbsp;" onclick="calc()">
+
+							<input type="button" id="next7"
+								style="position:absolute; left:662px; top:493px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px; visibility: hidden;"
+								value="&nbsp;Next Step&nbsp;" onclick="step7()" />
+						</div>
+
+						<!-- Step 7 -->
+
+						<div class="Mainstep" id="Step7" style="visibility:hidden; z-index: 993;">
+
+							<strong class="incanvas" style="position: absolute; top: 20px; left: 0px;">STEP</strong>
+
+							<span class="circlebg"
+								style="position: absolute; top: 27px; left: 55px;">&nbsp;7&nbsp;</span></br>
+
+							<span style="position: absolute; left:80px; top: 30px;"><i class="fa fa-hand-o-right"
+									aria-hidden="true">&nbsp;Current-Voltage curve
+								</i>&nbsp;</span><br><br>
+
+							<img id="step6-png1" class="board" src="images/PV_Parallel.png" alt="picture" width="630"
+								height="400"
+								style="position: absolute;  margin-left: 54px; margin-top: 31px; visibility: hidden;">
+
+
+
+
+						</div>
+
+
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+	<script src="js/sim.js"></script>
+
+</html>
